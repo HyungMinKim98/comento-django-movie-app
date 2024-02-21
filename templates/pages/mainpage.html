@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Recommended Movies</h1>
+<div class="container">
+  {% for movie in recommended_movies %}
+    <div>
+      <h2>{{ movie.Title }}</h2>
+      <img src="{{ movie.Poster }}" alt="{{ movie.Title }}">
+    </div>
+  {% endfor %}
+</div>
+
+<h1>Search Results</h1>
+<div class="container">
+  {% for movie in movies %}
+    <div>
+      <h2>{{ movie.Title }}</h2>
+      <img src="{{ movie.Poster }}" alt="{{ movie.Title }}">
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
